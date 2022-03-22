@@ -2,7 +2,7 @@
 
 Simran Arora, Patrick Lewis, Angela Fan, Jacob Kahn*, Christopher Ré*
 
-[**Paper**](https://dl.fbaipublicfiles.com/concurrentqa/reasoning_over_public_and_private_data_in_retrieval_based_systems.pdf)
+[**Paper**](https://arxiv.org/abs/2203.11027)
 | [**Blog Post**](https://ai.facebook.com/blog/building-systems-to-reason-securely-over-private-data)
 | [**Download**](#getting-the-dataset)
 | [**Citing**](#citation)
@@ -22,7 +22,17 @@ to download train, dev, and test sets along with dataset corpuses.
 Coming soon.
 
 ## Citation
-Coming soon.
+Please use the following Bibtex when using the dataset:
+```
+@misc{arora2022reasoning,
+      title={Reasoning over Public and Private Data in Retrieval-Based Systems}, 
+      author={Simran Arora and Patrick Lewis and Angela Fan and Jacob Kahn and Christopher Ré},
+      year={2022},
+      eprint={2203.11027},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR}
+}
+```
 
 ## License
 ConcurrentQA and related code is under an MIT license. See [LICENSE](LICENSE) for more information.
