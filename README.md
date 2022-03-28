@@ -11,15 +11,41 @@ This repository contains dataset resources and code for ConcurrentQA, a textual 
 
 <p align="center"><img width="85%" src="imgs/main_figure.png" /></p>
 
-### Getting the Dataset
+### Getting the ConcurrentQA Dataset
 The dataset can be downloaded with the provided script. Run:
 ```bash
 bash scripts/download_cqa.sh
 ```
 to download train, dev, and test sets along with dataset corpuses.
 
-### Code and Model Checkpoints
-Coming soon.
+### Model Checkpoints
+Models trained on HotpotQA be downloaded with the provided script. Run:
+```bash
+bash scripts/download_hotpot.sh
+```
+to download HotpotQA pretrained retriever and reader models.
+
+Models trained on ConcurrentQA coming soon!
+
+### Set up
+Please follow the environment set up instructions in ```MDR_PAIR/README.md'''
+
+### Code
+We include instructions 1) for training models on ConcurrentQA and 2) for evaluating performance under the PAIR privacy framework.
+
+#### Training Models on ConcurrentQA
+Set options in the script on lines marked ``FILL IN'', and run the script as follows: 
+```bash
+cd MDR_PAIR
+bash CQA_Scripts/MDR_end2end_CQA.sh
+```
+
+#### Evaluating QA Performance Under PAIR Framework
+Set options in the script on lines marked ``FILL IN'', and run the script as follows: 
+```bash
+cd MDR_PAIR
+bash CQA_Scripts/MDR_PairBaselines.sh
+```
 
 ## Citation
 Please use the following Bibtex when using the dataset:
