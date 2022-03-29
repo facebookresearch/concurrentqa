@@ -24,7 +24,16 @@ wget https://dl.fbaipublicfiles.com/concurrentqa/data/Retriever_CQA_test_all_ori
 # download the background corpora from which to retrieve
 cd ..
 mkdir corpora
+cd corpora
 
 wget https://dl.fbaipublicfiles.com/concurrentqa/corpora/enron_only_corpus.json
 wget https://dl.fbaipublicfiles.com/concurrentqa/corpora/combined_corpus.json
+wget https://dl.fbaipublicfiles.com/concurrentqa/corpora/wiki_only_corpus.json
 wget https://dl.fbaipublicfiles.com/concurrentqa/corpora/title2sent_map.json
+
+# download the retrieval model checkpoint that was trained on concurrentqa data
+cd ..
+mkdir models
+cd models
+
+wget https://dl.fbaipublicfiles.com/concurrentqa/models/mdr_encoder.pt

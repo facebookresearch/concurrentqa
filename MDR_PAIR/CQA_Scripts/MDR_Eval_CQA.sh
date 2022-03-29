@@ -5,18 +5,12 @@
 # LICENSE file in the root directory of this source tree.
 
 
-
-# FILL IN: ``subfolder'' should be uniquely named according to your experiment/run
-SUBFOLDER=base_train
+SUBFOLDER=base_eval
 
 # FILL IN: modify ``base dir'' according to your directory path to the concurrentqa repository
 BASE_DIR=/mnt/disks/scratch/concurrentqa/
 PREFIX_DIR=${BASE_DIR}/RUNS/
 HOTPOT_MODELS_PATH=${BASE_DIR}/datasets/hotpotqa/models/
-
-# train the retriever on CQA
-TRAIN_DATA_PATH=${BASE_DIR}/datasets/concurrentqa/data/Retriever_CQA_train_all_original.json
-DEV_DATA_PATH=${BASE_DIR}/datasets/concurrentqa/data/Retriever_CQA_dev_all_original.json
 
 # retrieve and read
 EVAL_TRAIN_DATA_PATH=${BASE_DIR}/datasets/concurrentqa/data/CQA_train_all.json
@@ -30,47 +24,20 @@ DOC_PRIVACY=0
 RETRIEVAL_MODE=fullindex
 MIN_BY_DOMAIN=0 
 
-# FILL IN: Set 1 (Yes) and 0 (No) for the steps you want to run.
-TRAIN_CQA_DPR=1 # train a mdr model on concurrentqa data
-ENCODE_PASSAGE_CORPUS=1 # encode the corpora using a trained mdr model
+ENCODE_PASSAGE_CORPUS=1 # encode the corpora using a trained  mdr model
 RETRIEVE_W_CQA_DPR=1 # retrieve using the trained mdr model from the encoded corpus
 READ_DPR_RETRIEVED_W_ELECTRA_HOTPOT=1 # read using a pretrained electra model that was trained on hotpot data
 
-################################################################
-# RETRIEVAL to TRAIN EWQ-DPR
-################################################################
 MAX_C_LEN=300
 MAX_Q_LEN=70
 MAX_Q_SP_LEN=350
-
-if [[ $TRAIN_CQA_DPR == 1 ]]; then
-    CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python train_mhop.py \
-        --do_train \
-        --prefix ${RUN_ID} \
-        --predict_batch_size 3000 \
-        --model_name roberta-base \
-        --train_batch_size 150 \
-        --learning_rate 5e-5 \
-        --fp16 \
-        --train_file ${TRAIN_DATA_PATH} \
-        --predict_file ${DEV_DATA_PATH}  \
-        --seed 16 \
-        --eval-period -1 \
-        --max_c_len ${MAX_C_LEN} \
-        --max_q_len ${MAX_Q_LEN} \
-        --max_q_sp_len ${MAX_Q_SP_LEN} \
-        --shared-encoder \
-        --warmup-ratio 0.1 \
-        --output_dir ./logs/${SUBFOLDER}
-fi
 
 ################################################################
 #   INDEX THE WIKI AND ENRON PSGS TOGETHER
 ################################################################
 
-# FILL IN: modify for your runs
-if [[ "$SUBFOLDER" == base_train ]]; then
-    MODEL_CHECKPOINT=./logs/${SUBFOLDER}/03-08-2022/0-seed16-bsz150-fp16True-lr5e-05-decay0.0-warm0.1-valbsz3000-sharedTrue-multi1-schemenone/checkpoint_best.pt
+if [[ "$SUBFOLDER" == base_eval ]]; then
+    MODEL_CHECKPOINT=${BASE_DIR}/datasets/concurrentqa/models/mdr_encoder.pt
 fi
 
 if [[ $ENCODE_PASSAGE_CORPUS == 1 ]]; then
@@ -106,7 +73,7 @@ if [[ $RETRIEVE_W_CQA_DPR == 1 ]]; then
             DPR_CQA_DATA=${EVAL_DEV_DATA_PATH}
         fi
 
-        CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python eval_mhop_retrieval.py \
+        CUDA_VISIBLE_DEVICES=4,5,6,7 python eval_mhop_retrieval.py \
             ${DPR_CQA_DATA} \
             ${PREFIX_DIR}/${SUBFOLDER}/idx.npy \
             ${PREFIX_DIR}/${SUBFOLDER}/id2doc.json \

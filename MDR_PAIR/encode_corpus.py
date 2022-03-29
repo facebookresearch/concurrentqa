@@ -44,9 +44,15 @@ def main():
     args = encode_args()
 
     out_dirname = os.path.dirname(args.embed_save_path)
+    if not os.path.exists(out_dirname):
+        os.makedirs(out_dirname)
+
+    if not os.path.exists(f"{args.embed_save_path}/"):
+        os.makedirs(f"{args.embed_save_path}/")
+
     now = datetime.now()
     datetime_str = now.strftime("%d/%m/%Y %H:%M:%S")
-    with open(f"{out_dirname}/encode_corpus_configs.json", "w") as f:
+    with open(f"{args.embed_save_path}/encode_corpus_configs.json", "w") as f:
         f.write(f"DATE: {datetime_str}\n")
         json.dump(vars(args), f)
 

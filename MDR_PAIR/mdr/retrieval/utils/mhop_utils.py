@@ -172,7 +172,7 @@ def check_2hop(raw_path):
 
 
 def add_sp_labels(raw_path, input_file, save_path,
-                  title2sent_map="/mnt/disks/scratch1/pqa/DATA/title2sent_map.json",
+                  title2sent_map,
                   title2sent_map_alt=""):
     """
     Add sp sentence supervision for QA model training
@@ -304,6 +304,6 @@ if __name__ == "__main__":
     original_hotpot_data, retrieved, output_path = sys.argv[1], sys.argv[2], sys.argv[3]
     if len(sys.argv) > 4:
         title2sent_map = sys.argv[4]
-        add_sp_labels(original_hotpot_data, retrieved, output_path, title2sent_map_alt=title2sent_map)
+        add_sp_labels(original_hotpot_data, retrieved, output_path, title2sent_map=title2sent_map, title2sent_map_alt=title2sent_map)
     else:
         add_sp_labels(original_hotpot_data, retrieved, output_path)

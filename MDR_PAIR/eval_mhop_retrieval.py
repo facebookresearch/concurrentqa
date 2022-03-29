@@ -100,7 +100,7 @@ if __name__ == '__main__':
     )  
     parser.add_argument("--title2sents_map",
         type=str,
-        default="/mnt/disks/scratch1/concurrentqa/datasets/concurrentqa/corpora/title2sent_map.json"
+        default="/mnt/disks/scratch/concurrentqa/datasets/concurrentqa/corpora/title2sent_map.json"
     )
 
     args = parser.parse_args()
@@ -482,6 +482,7 @@ if __name__ == '__main__':
                     combined_scores = np.append(combined_scores, search_scores_01.ravel())
                     combined_scores = np.append(combined_scores, search_scores_10.ravel())
                     combined_scores = np.append(combined_scores, search_scores_11.ravel())
+                    sort_scores_by_hop1_idx = np.argsort(combined_scores.ravel())[::-1]
                     ranked_pairs_00 = np.vstack(np.unravel_index(sort_scores_by_hop1_idx,(4*args.beam_size, args.beam_size))).transpose()
 
                 elif args.retrieval_mode != "fullindex":
