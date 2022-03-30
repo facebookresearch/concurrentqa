@@ -1,0 +1,3 @@
+[submodule "multihop_dense_retrieval"]
+	path = multihop_dense_retrieval
+	url = git@github.com:simran-arora/multihop_dense_retrieval.git
