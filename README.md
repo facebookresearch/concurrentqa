@@ -24,7 +24,7 @@ bash scripts/download_hotpot.sh
 ```
 
 ### Set up
-Please follow the environment set up instructions in ```MDR_PAIR/README.md'''. 
+Please follow the environment set up instructions in ```multihop_dense_retrieval/README.md'''. 
 
 
 ### Code
@@ -33,7 +33,7 @@ We include instructions 1) for training and evaluating models on ConcurrentQA da
 #### Training Models on ConcurrentQA
 To run evaluation with provided model checkpoints, use the script:  
 ```bash
-cd MDR_PAIR
+cd multihop_dense_retrieval
 bash CQA_Scripts/MDR_Eval_CQA.sh
 ```
 
@@ -65,14 +65,14 @@ Reader scores on test split ...
 
 To train your own MDR model from scratch, use the script: 
 ```bash
-cd MDR_PAIR
+cd multihop_dense_retrieval
 bash CQA_Scripts/MDR_end2end_CQA.sh
 ```
 
 #### Evaluating QA Performance Under PAIR Framework
 Set the desired privacy mode and retrieval mode in the script and run as follows: 
 ```bash
-cd MDR_PAIR
+cd multihop_dense_retrieval
 bash CQA_Scripts/MDR_PairBaselines.sh
 ```
 
