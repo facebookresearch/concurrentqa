@@ -12,6 +12,19 @@ This repository contains dataset resources and code for ConcurrentQA, a textual 
 <p align="center"><img width="85%" src="imgs/main_figure.png" /></p>
 
 
+### Set up
+Clone the repository as follows.
+```bash
+git clone git@github.com:facebookresearch/concurrentqa.git
+cd concurrentqa
+cd multihop_dense_retrieval
+git submodule init
+git submodule update
+```
+
+To run MDR, please follow the environment set up instructions in ```multihop_dense_retrieval/README.md'''. 
+
+
 ### Getting the ConcurrentQA Dataset and Model Checkpoints
 To download train, dev, and test sets along with email and Wikipedia passage corpora, and model checkpoints, run:
 ```bash
@@ -22,9 +35,6 @@ To download retriever and reader models trained on HotpotQA data, run:
 ```bash
 bash scripts/download_hotpot.sh
 ```
-
-### Set up
-Please follow the environment set up instructions in ```multihop_dense_retrieval/README.md'''. 
 
 
 ### Code
