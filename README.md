@@ -4,7 +4,7 @@ Simran Arora, Patrick Lewis, Angela Fan, Jacob Kahn*, Christopher Ré*
 
 [**Paper**](https://arxiv.org/abs/2203.11027)
 | [**Blog Post**](https://ai.facebook.com/blog/building-systems-to-reason-securely-over-private-data)
-| [**Download**](#getting-the-dataset)
+| [**Download**](#getting-the-concurrentqa-dataset-and-model-checkpoints)
 | [**Citing**](#citation)
 
 This repository contains dataset resources and code for ConcurrentQA, a textual QA benchmark to require concurrent retrieval over multiple data-distributions and privacy scopes. It also contains result analysis code and other resources for research in the private QA setting.
