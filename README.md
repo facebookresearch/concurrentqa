@@ -22,7 +22,7 @@ git submodule init
 git submodule update
 ```
 
-To run MDR, please follow the environment set up instructions in ``multihop_dense_retrieval/README.md``'. 
+To run MDR, please follow the environment set up instructions in ```multihop_dense_retrieval/README.md'''. 
 
 
 ### Getting the ConcurrentQA Dataset and Model Checkpoints
