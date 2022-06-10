@@ -22,7 +22,14 @@ git submodule init
 git submodule update
 ```
 
-To run MDR, please follow the environment set up instructions in ```multihop_dense_retrieval/README.md'''. 
+Set up the environment as follows. We encourage the use of conda environments.
+```bash
+conda create --name cqa python=3.6
+conda activate cqa
+
+cd concurrentqa/multihop_dense_retrieval/
+bash setup.sh
+```
 
 
 ### Getting the ConcurrentQA Dataset and Model Checkpoints
