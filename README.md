@@ -22,13 +22,19 @@ git submodule init
 git submodule update
 ```
 
-Set up the environment as follows. We encourage the use of conda environments.
+Set up the environment as follows (according to the MDR instructions). We encourage the use of conda environments.
 ```bash
 conda create --name cqa python=3.6
 conda activate cqa
 
 cd concurrentqa/multihop_dense_retrieval/
 bash setup.sh
+```
+
+If you are using Cuda 11, we find the following changes to the above setup work well: 1) use ```python=3.7```, 2) in ```/multihop_dense_retrieval/setup.sh``` modify the faiss-gpu and pytorch instructions to the following:
+```
+conda install faiss-gpu cudatoolkit=11.3 -c pytorch
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
 ```
 
 
