@@ -18,6 +18,9 @@ wget https://dl.fbaipublicfiles.com/mdpr/data/hotpot/train_retrieval_b100_k100_s
 wget https://dl.fbaipublicfiles.com/mdpr/data/hotpot/dev_retrieval_b50_k50_sp.json
 wget https://dl.fbaipublicfiles.com/mdpr/data/hotpot/dev_retrieval_top100_sp.json
 
+# https://github.com/hotpotqa/hotpot/blob/master/README.md
+wget http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json
+
 cd ..
 mkdir corpora
 cd corpora
