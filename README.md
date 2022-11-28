@@ -111,8 +111,7 @@ Please use the following Bibtex when using the dataset:
          title={Reasoning over Public and Private Data in Retrieval-Based Systems}, 
          author={Simran Arora and Patrick Lewis and Angela Fan and Jacob Kahn and Christopher Ré},
          year={2022},
-         eprint={2203.11027},
-         archivePrefix={arXiv},
+         journal={arXiv:2203.11027},
          primaryClass={cs.IR}
 }
 ```
