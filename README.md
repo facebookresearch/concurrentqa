@@ -107,13 +107,13 @@ Descriptions of privacy and retrieval modes are included in the script.
 ## Citation
 Please use the following Bibtex when using the dataset:
 ```
-@misc{arora2022reasoning,
-      title={Reasoning over Public and Private Data in Retrieval-Based Systems}, 
-      author={Simran Arora and Patrick Lewis and Angela Fan and Jacob Kahn and Christopher Ré},
-      year={2022},
-      eprint={2203.11027},
-      archivePrefix={arXiv},
-      primaryClass={cs.IR}
+@article{arora2022reasoning,
+         title={Reasoning over Public and Private Data in Retrieval-Based Systems}, 
+         author={Simran Arora and Patrick Lewis and Angela Fan and Jacob Kahn and Christopher Ré},
+         year={2022},
+         eprint={2203.11027},
+         archivePrefix={arXiv},
+         primaryClass={cs.IR}
 }
 ```
 
