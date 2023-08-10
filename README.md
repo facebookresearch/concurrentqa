@@ -2,7 +2,7 @@
 
 Simran Arora, Patrick Lewis, Angela Fan, Jacob Kahn*, Christopher Ré*
 
-[**Paper**](https://arxiv.org/abs/2203.11027)
+[**Paper**]([https://arxiv.org/abs/2203.11027](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00556/116046/Aggretriever-A-Simple-Approach-to-Aggregate)
 | [**Blog Post**](https://ai.facebook.com/blog/building-systems-to-reason-securely-over-private-data)
 | [**Download**](#getting-the-concurrentqa-dataset-and-model-checkpoints)
 | [**Citing**](#citation)
@@ -110,9 +110,9 @@ Please use the following Bibtex when using the dataset:
 @article{arora2022reasoning,
          title={Reasoning over Public and Private Data in Retrieval-Based Systems}, 
          author={Simran Arora and Patrick Lewis and Angela Fan and Jacob Kahn and Christopher Ré},
-         year={2022},
-         journal={arXiv:2203.11027},
-         primaryClass={cs.IR}
+         year={2023},
+	 url={https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00556/116046/Aggretriever-A-Simple-Approach-to-Aggregate},
+         journal={Transactions of the Association for Computational Linguistics},
 }
 ```
 
