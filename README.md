@@ -2,7 +2,7 @@
 
 Simran Arora, Patrick Lewis, Angela Fan, Jacob Kahn*, Christopher Ré*
 
-[**Paper**](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00556/116046/Aggretriever-A-Simple-Approach-to-Aggregate)
+[**Paper**](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00580/117168/Reasoning-over-Public-and-Private-Data-in)
 | [**Blog Post**](https://ai.facebook.com/blog/building-systems-to-reason-securely-over-private-data)
 | [**Download**](#getting-the-concurrentqa-dataset-and-model-checkpoints)
 | [**Citing**](#citation)
