@@ -51,7 +51,7 @@ bash scripts/download_hotpot.sh
 
 The datasets can also be downloaded via Hugging Face:
 - [Retrieval benchmark](https://huggingface.co/datasets/simarora/ConcurrentQA-Retrieval)
-  [QA benchmark](https://huggingface.co/datasets/simarora/ConcurrentQA)
+- [QA benchmark](https://huggingface.co/datasets/simarora/ConcurrentQA)
 
 
 ### Code
