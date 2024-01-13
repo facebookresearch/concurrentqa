@@ -49,6 +49,10 @@ To download retriever and reader models trained on HotpotQA data, run:
 bash scripts/download_hotpot.sh
 ```
 
+The datasets can also be downloaded via Hugging Face:
+- [Retrieval benchmark](https://huggingface.co/datasets/simarora/ConcurrentQA-Retrieval)
+  [QA benchmark](https://huggingface.co/datasets/simarora/ConcurrentQA)
+
 
 ### Code
 We include instructions 1) for training and evaluating models on ConcurrentQA data in the absense of privacy cocerns and 2) for evaluating performance under the PAIR privacy framework.
