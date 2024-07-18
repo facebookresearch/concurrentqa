@@ -115,7 +115,7 @@ Please use the following Bibtex when using the dataset:
          title={Reasoning over Public and Private Data in Retrieval-Based Systems}, 
          author={Simran Arora and Patrick Lewis and Angela Fan and Jacob Kahn and Christopher Ré},
          year={2023},
-	 url={https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00556/116046/Aggretriever-A-Simple-Approach-to-Aggregate},
+	 url={https://aclanthology.org/2023.tacl-1.51/},
          journal={Transactions of the Association for Computational Linguistics},
 }
 ```
